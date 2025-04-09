@@ -14,6 +14,8 @@ int main(void) {
 
 if (guessed_number == NUM) {
     std::cout <<"Muy bien, ¡era ese!\n";
+} else {
+    std::cout <<"No, ese no era.\n";
 }
     return 0;
 }
