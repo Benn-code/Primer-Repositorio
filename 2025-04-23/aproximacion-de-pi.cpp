@@ -35,7 +35,7 @@ proporciona alrededor de 15-16 dígitos decimales de precisión.
 */
 double pi_aprox(int n) {
     double aproximacion = 0.0; // Variable para acumular la suma 
-    for (int k = 0; k < n; ++k) { // Bucle para sumar los términos desde k=0 hasta k=n-1
+    for (int k = 0; k <= n; ++k) { // Bucle para sumar los términos desde k=0 hasta k=n
         double termino = (1.0 / pow(16, k)) *
                          (4.0 / (8 * k + 1) -
                           2.0 / (8 * k + 4) -
