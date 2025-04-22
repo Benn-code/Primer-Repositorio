@@ -16,8 +16,12 @@ llama a pi_aprox(n) y calcula la diferencia relativa entre la aproximación y el
 double pi_aprox(int n);
 
 int main(void) {
-    std::cout.precision(16);
-    std::cout.setf(std::ios::scientific);
+    std::cout.precision(16); // Establece la precisión a 16 dígitos significativos para la notación científica
+    std::cout.setf(std::ios::scientific); // Establece el formato a notación científica
+
+    // Se agrega una cabecera para que se vean más bonitos los resultados
+    std::cout << "n\tAprox. Pi (pi_aprox(n))\tDiferencia Relativa\n";
+    std::cout << "=============================================================\n";
 
     for (int n = 1; n <= 20; ++n) {
         double pi_calculado = pi_aprox(n);
