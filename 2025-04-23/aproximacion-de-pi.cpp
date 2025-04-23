@@ -19,14 +19,16 @@ int main(void) {
     std::cout.precision(16); // Establece la precisión a 16 dígitos significativos para la notación científica
     std::cout.setf(std::ios::scientific); // Establece el formato a notación científica
 
-    // Se agrega una cabecera para que se vean más bonitos los resultados
-    std::cout << "n\tAprox. Pi (pi_aprox(n))\t Diferencia Relativa\n";
+    // Cabecera para que se vean más bonitos los resultados
+    std::cout << "-------------------------------------------------------------\n";
+    std::cout << "n\tAprox. Pi(pi_aprox(n))\t Diferencia Relativa\n";
     std::cout << "-------------------------------------------------------------\n";
 
     for (int n = 1; n <= 20; ++n) {
-        double pi_calculado = pi_aprox(n);
+        double pi_calculado = pi_aprox(n); //Se llama a pi_aprox y se asigna a otra variable para no calcularla dos veces
         double diferencia_relativa = std::abs(1.0 - (pi_calculado / M_PI));
-        std::cout << n << "\t" << pi_calculado << "\t" << diferencia_relativa << std::endl;
+        std::cout << n << "\t" << pi_calculado << "\t " << diferencia_relativa << std::endl; 
+        //std::endl imprime cada valor en una nueva linea, «formatea» la salida
     }
     return 0;
 }
