@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <numeric>
 
-int main(int argc , char **argv)
+int main()
 {
 // Allocate memory for 10 integers
 int * dynamic_array = new int[5];
@@ -19,9 +19,12 @@ dynamic_array[4] = 6;
 //std::for_each(dynamic_array.begin(), dynamic_array.end(), print);
 
 //print
-
-std::cout << (&dynamic_array[0]) << "/n";
+std::cout << (dynamic_array[0]) << "\n";
 
 // IMPORTANT: Must deallocate manually
 delete[] dynamic_array;
+
+//Add new
+//dynamic_array.push_back(6);
+
 }
