@@ -7,7 +7,9 @@
 int main () {
 // Create a vector
 std::vector<int> numbers = {2, 3, 4, 5, 6};
-std::cout << (&numbers[0]) << "\n";
+std::cout << (numbers[0]) << "\n";
+//std::cout << (&numbers[0]) << "\n";
+
 //Hasta aquí hace la primera parte de crear el array, meterle los números pedidos e imprimir 
 //el primero, falta meterle el 10 al final
 

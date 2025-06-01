@@ -25,6 +25,7 @@ std::cout << (dynamic_array[0]) << "\n";
 delete[] dynamic_array;
 
 //Add new
-//dynamic_array.push_back(6);
+dynamic_array = new int [0] 
+//dynamic_array.push_back(10);
 
 }

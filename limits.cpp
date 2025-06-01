@@ -52,5 +52,13 @@ int main() {
     std::cout << "Número de dígitos decimales de precisión: " << std::numeric_limits<float>::digits10 << std::endl;
     std::cout << std::endl;
 
+
+    std::cout << "float lowest: " << std::numeric_limits <float>::lowest() << '\n';
+    std::cout << "double max: " << std::numeric_limits <double>::max() << '\n';
+    std::cout << "double min: " << std::numeric_limits <double>::min() << '\n';
+    std::cout << "float min: " << std::numeric_limits <float>::min() << '\n';
+    std::cout << "double lowest: " << std::numeric_limits <double>::lowest() << '\n';
+    std::cout << "float max: " << std::numeric_limits <float>::max() << '\n';
+
     return 0;
 }
