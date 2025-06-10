@@ -14,7 +14,7 @@ bool isDivisibleByBoth(int n, int a, int b);
 int main(int argc, char **argv){
     if (argc != 5) { // Validar de los datos de entrada
         std::cerr << "The program requires four inputs.\n"
-                     "Use the first two values ​​to indicate the range" 
+                     "Use the first two values to indicate the range" 
                      "and the remaining two to indicate the numbers by which you want to check that they are divisible simultaneously.\n"
                      "Example: " << argv[0] << " <vmin> <vmax> <divisor1> <divisor2> \n";
         return 1;
@@ -35,7 +35,7 @@ int main(int argc, char **argv){
     return 1;
     }
     
-    std::cout << "Los números divisibles por " << a << " y " << b << " en el rango" << "[" << vmin << "-" << vmax << "] son:\n";
+    std::cout << "Los números divisibles por " << a << " y " << b << " simultáneamente en el rango" << "[" << vmin << "-" << vmax << "] son:\n";
 
     for (int ii = vmin ; ii <= vmax ; ii++){
         if (isDivisibleByBoth(ii, a, b)){

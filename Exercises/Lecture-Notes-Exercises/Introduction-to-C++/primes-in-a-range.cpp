@@ -1,4 +1,5 @@
-/*"Write a program that prints the number of primes less than n for n between 2 and 200. Plot it using either gnuplot or matplotlib. 
+/*"Create a function that receives an integers and return true if it is a prime, false otherwise. 
+Use it in the main function to print the primes from 2 up to 200."
 Este programa
 */
 #include <iostream>
