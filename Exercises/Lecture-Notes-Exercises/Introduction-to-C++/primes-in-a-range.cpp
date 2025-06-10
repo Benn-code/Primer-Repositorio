@@ -1,9 +1,12 @@
+/*"Write a program that prints the number of primes less than n for n between 2 and 200. Plot it using either gnuplot or matplotlib. 
+Este programa
+*/
 #include <iostream>
 #include <cmath>
 #include <string>
 #include <fstream>
 
-// declaration
+// Declaración
 bool isprime(long n);
 
 int main(int argc, char **argv){
