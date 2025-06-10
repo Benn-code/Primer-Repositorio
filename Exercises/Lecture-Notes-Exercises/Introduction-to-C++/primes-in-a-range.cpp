@@ -62,7 +62,7 @@ int main(int argc, char **argv){
 // implementación
 bool isprime(long n) {
     // Validación del rango
-    if (n <= 1) {
+    if (n <= 1){
         std::cerr << "Out of range number: " << n << "\n";
         return false;
     }
@@ -70,10 +70,10 @@ bool isprime(long n) {
     bool flag = true; 
 
     // Casos especiales
-    if (n == 2) {
+    if (n == 2){
         return true;
     }
-    if (n % 2 == 0) {
+    if (n % 2 == 0){
         return false;
     }
 
