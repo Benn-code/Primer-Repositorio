@@ -53,6 +53,12 @@ double average(double a, double b){
     return (a+b)/2;
 }
 
+//Calcula el Máximo Común Divisor (solo desde c++ 17)
+double gcd (int num1, int num2){
+    double result_gcd = std::gcd(num1, num2);
+    return result_gcd;
+}
+
 
 //Suma armónica hasta un límite
 double harmonic_sum (int limit){
