@@ -99,7 +99,36 @@ double integrate_gaussian_quadrature(double (*func)(double, double, double), dou
 int main() {
     // Rango de x para la CDF
     const double X_MIN = 0.0;
-    const double X_MAX = 20.0;
+ 
+    // Archivo de salida para los datos de la CDF
+    std::ofstream outputFile("gamma_cdf_data.txt");
+    if (!outputFile.is_open()) {
+        std::cerr << "Error: No se pudo abrir el archivo 'gamma_cdf_data.txt' para escritura." << std::endl;
+        return 1;
+    }
+
+    // Escribir encabezado en el archivo
+    outputFile << std::fixed << std::setprecision(10); // Para alta precisión en la salida
+    outputFile << "# x\tF_simpson(x)\tF_gaussian(x)\n";
+
+    // Calcular y escribir la CDF para cada x en el rango
+    for (double x = X_MIN; x <= X_MAX; x += X_STEP) {
+        double cdf_simpson = integrate_simpson(gamma_pdf, 0.0, x, SIMPSON_INTERVALS);
+        double cdf_gaussian = integrate_gaussian_quadrature(gamma_pdf, 0.0, x);
+
+        // La CDF debe ser entre 0 y 1. Pequeños errores numéricos pueden dar valores fuera.
+        // Clamp los valores para que estén en [0, 1] si hay errores de redondeo.
+        cdf_simpson = std::max(0.0, std::min(1.0, cdf_simpson));
+        cdf_gaussian = std::max(0.0, std::min(1.0, cdf_gaussian));
+
+        outputFile << x << "\t" << cdf_simpson << "\t" << cdf_gaussian << "\n";
+    }
+
+    outputFile.close();
+    std::cout << "Datos de la CDF de la distribución Gamma guardados en 'gamma_cdf_data.txt'\n";
+
+    return 0;
+}   const double X_MAX = 20.0;
     const double X_STEP = 0.05; // Paso para evaluar x (más pequeño = más puntos, más suave la gráfica)
 
     // Número de intervalos para Simpson (asegúrate de que sea par y lo suficientemente grande)
@@ -134,3 +163,5 @@ int main() {
 
     return 0;
 }
+
+as
